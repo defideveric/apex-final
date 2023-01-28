@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "apex": {
+      "main": "src/apex/main.mo",
+      "type": "motoko"
+    },
+    "apex_assets": {
+      "dependencies": [
+        "apex"
+      ],
+      "frontend": {
+        "entrypoint": "src/apex_assets/src/index.html"
+      },
+      "source": [
+        "src/apex_assets/assets",
+        "dist/apex_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
